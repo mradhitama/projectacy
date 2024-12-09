@@ -55,7 +55,7 @@ onUnmounted(() => {
 
 <style scoped>
 .fixed {
-  background-color: black;
+  background-color: #0E1C1C;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,7 @@ onUnmounted(() => {
 }
 
 p {
-  color: white;
+  color: #E9E3E7;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   font-size: 3rem;
 }
