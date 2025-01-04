@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ['@/assets/css/tailwind.css', '@/assets/css/global.css'],
+  modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
       title: "The ProjectAcy | Discover Limitless Creativity",
@@ -40,7 +41,7 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap' }
       ],
     },
   },

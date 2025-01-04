@@ -8,7 +8,15 @@ module.exports = {
     './app.vue',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        whiteSand : '#E9E3E7',
+        greySand : '#908C8A',
+        greenOcean : '#49716E',
+        deepGreenOcean : '#234040',
+        darkOcean: '#0E1C1C'
+      },
+    },
   },
   plugins: [],
 };
