@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-whiteSand dark:bg-darkOcean">
+    <div class="bg-gray-100 dark:bg-darkOcean text-black dark:text-white">
         <LoadingScreen v-if="isLoading" />
         <!-- <ComingSoon v-show="!isLoading" /> -->
         <Hero v-show="!isLoading" />
@@ -8,7 +8,7 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import LoadingScreen from "@/components/homepageSection/GreetingsScreen.vue";
+import LoadingScreen from "~/components/GreetingsScreen.vue";
 // import ComingSoon from "~/components/homepageSection/ComingSoon.vue";
 import Hero from "~/components/homepageSection/Hero.vue";
 

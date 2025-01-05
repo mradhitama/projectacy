@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed inset-0 flex items-center justify-center bg-deepGreenOcean z-50"
+    class="fixed inset-0 flex items-center justify-center bg-darkOcean z-50"
     :class="slideClass"
   >
     <div class="text-center">
