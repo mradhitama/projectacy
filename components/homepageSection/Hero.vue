@@ -27,9 +27,9 @@
             <div
               class="relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-lg shadow flex items-center justify-center h-full group overflow-hidden">
               <img src="/images/work.png" alt="Background"
-                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 md:scale-100 md:group-hover:scale-105 scale-105 md:opacity-100 md:group-hover:opacity-30 opacity-30">
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 lg:scale-100 lg:group-hover:scale-105 scale-105 lg:opacity-100 lg:group-hover:opacity-30 opacity-30">
               <h5
-                class="relative font-semibold md:opacity-0 md:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
+                class="relative font-semibold lg:opacity-0 lg:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
                 <span class="mr-2">Works</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                   stroke="currentColor" class="size-9">
@@ -55,9 +55,9 @@
             <div
               class="relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-lg shadow flex items-center justify-center h-full group overflow-hidden">
               <img src="/images/project.png" alt="Background"
-                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 md:scale-100 md:group-hover:scale-105 scale-105 md:opacity-100 md:group-hover:opacity-30 opacity-30">
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 lg:scale-100 lg:group-hover:scale-105 scale-105 lg:opacity-100 lg:group-hover:opacity-30 opacity-30">
               <h5
-                class="relative font-semibold md:opacity-0 md:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
+                class="relative font-semibold lg:opacity-0 lg:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
                 <span class="mr-2">Projects</span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                   stroke="currentColor" class="size-9">
@@ -74,7 +74,7 @@
               class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full text-center group">
               <div class="w-full max-w-screen-lg mx-auto">
                 <h5 class="font-semibold mb-5">Stack I use</h5>
-                <IconCarousel/>
+                <IconCarousel />
               </div>
             </div>
           </div>
@@ -85,8 +85,24 @@
           <div
             class="grid lg:grid-cols-1 lg:grid-rows-3 md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid-rows-1 gap-3 h-full w-full">
             <div
-              class="lg:col-span-1 lg:row-span-1 md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
-              <h3 class="text-base font-semibold">Let’s amaze the world!</h3>
+              class="lg:col-span-1 lg:row-span-1 md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-lg shadow flex items-center text-center justify-center h-full">
+              <div>
+                <h5 class="font-semibold">Media</h5>
+                <div class="flex items-center justify-center gap-5 mt-5">
+                  <a href="#" target="_blank"
+                    class="p-2 rounded-2xl bg-gray-200 hover:filter hover:invert hover:brightness-200 transition-all duration-500 ease-in-out">
+                    <img class="h-12 w-12" src="/images/contact/linkedin-black.svg" alt="LinkedIn" title="LinkedIn">
+                  </a>
+                  <a href="#" target="_blank"
+                    class="p-2 rounded-2xl bg-gray-200 hover:filter hover:invert hover:brightness-200 transition-all duration-500 ease-in-out">
+                    <img class="h-12 w-12" src="/images/contact/github-black.svg" alt="GitHub" title="GitHub">
+                  </a>
+                  <a href="#" target="_blank"
+                    class="p-2 rounded-2xl bg-gray-200 hover:filter hover:invert hover:brightness-200 transition-all duration-500 ease-in-out">
+                    <img class="h-12 w-12" src="/images/contact/medium-black.svg" alt="Medium" title="Medium">
+                  </a>
+                </div>
+              </div>
             </div>
             <div
               class="col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
@@ -94,7 +110,7 @@
             </div>
             <div
               class="col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
-              <h3 class="text-base font-semibold">Social Media</h3>
+              <h3 class="text-base font-semibold">Let’s amaze the world!</h3>
             </div>
           </div>
         </div>
