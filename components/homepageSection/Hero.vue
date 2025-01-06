@@ -25,14 +25,24 @@
               </div>
             </div>
             <div
-              class="md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
-              <h3 class="text-base font-semibold">Work</h3>
+              class="relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-lg shadow flex items-center justify-center h-full group overflow-hidden">
+              <img src="/images/work.png" alt="Background"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 md:scale-100 md:group-hover:scale-105 scale-105 md:opacity-100 md:group-hover:opacity-30 opacity-30">
+              <h5
+                class="relative font-semibold md:opacity-0 md:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
+                <span class="mr-2">Works</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="size-9">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </h5>
             </div>
             <div
               class="md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
               <div class="text-center">
-                  <DarkModeSwitch />
-                </div>
+                <DarkModeSwitch />
+              </div>
             </div>
             <div
               class="md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-lg shadow flex items-center justify-center h-full">
@@ -43,16 +53,29 @@
               <h3 class="text-base font-semibold">About The ProjectACY</h3>
             </div>
             <div
-              class="md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
-              <h3 class="text-base font-semibold">Projects</h3>
+              class="relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-lg shadow flex items-center justify-center h-full group overflow-hidden">
+              <img src="/images/project.png" alt="Background"
+                class="absolute inset-0 w-full h-full object-cover transition-all duration-300 md:scale-100 md:group-hover:scale-105 scale-105 md:opacity-100 md:group-hover:opacity-30 opacity-30">
+              <h5
+                class="relative font-semibold md:opacity-0 md:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
+                <span class="mr-2">Projects</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                  stroke="currentColor" class="size-9">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </h5>
             </div>
             <div
               class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
               <h3 class="text-base font-semibold">Articles</h3>
             </div>
             <div
-              class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full">
-              <h3 class="text-base font-semibold">Stack I use</h3>
+              class="md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-lg shadow flex items-center justify-center h-full text-center group">
+              <div class="w-full max-w-screen-lg mx-auto">
+                <h5 class="font-semibold mb-5">Stack I use</h5>
+                <IconCarousel/>
+              </div>
             </div>
           </div>
         </div>
@@ -84,10 +107,12 @@
 
 <script>
 import DarkModeSwitch from '~/components/homepageSection/DarkModeSwitch.vue';
+import IconCarousel from '~/components/homepageSection/IconCarousel.vue';
 
 export default {
   components: {
     DarkModeSwitch,
+    IconCarousel,
   },
 };
 </script>
@@ -106,15 +131,15 @@ export default {
 
 .text .cy {
   display: inline-block;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.25s ease-in-out;
 }
 
 .text .adhitama {
   position: absolute;
   top: 0;
-  left: 1.5rem;
+  left: 1.55rem;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out 0.4s;
+  transition: opacity 0.15s ease-in-out 0.15s;
 }
 
 .text-container:hover .cy {
@@ -127,6 +152,6 @@ export default {
 
 .text-container:not(:hover) .adhitama {
   opacity: 0;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.15s ease-out;
 }
 </style>

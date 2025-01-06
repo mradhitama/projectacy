@@ -17,11 +17,25 @@ module.exports = {
         deepGreenOcean : '#1A3636',
         deepOcean: '#292929',
         darkOcean: '#222222',
-        darkness: '#191919'
+        darkness: '#191919',
+        lightBlack: '#333333'
+      },
+      keyframes: {
+        carousel: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        carousel: 'carousel 25s linear infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant, e }) {
+      addVariant('pause', '&:hover');
+    },
+  ],
 };
 
 

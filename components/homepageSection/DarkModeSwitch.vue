@@ -1,9 +1,9 @@
 <template>
     <label class="relative inline-flex items-center cursor-pointer">
     <input type="checkbox" class="sr-only peer" :checked="isDarkMode" @change="toggleDarkMode" />
-    <div class="w-20 h-10 bg-greenOcean rounded-full border-8 border-greenOcean peer-checked:bg-gray-500 peer-checked:border-white transition-all">
+    <div class="w-20 h-12 bg-gray-500 rounded-full border-8 border-gray-500 peer-checked:bg-yellow-500 peer-checked:border-gray-500 transition-all">
     </div>
-    <div class="w-6 h-6 bg-yellow-500 rounded-full absolute left-12 peer-checked:left-5 peer-checked:bg-white peer-checked:w-14 peer-checked:h-8 transition-all flex items-center justify-center">
+    <div class="w-8 h-8 bg-yellow-500 rounded-full absolute left-10 peer-checked:left-6 peer-checked:bg-gray-500 peer-checked:w-14 peer-checked:h-10 transition-all flex items-center justify-center">
     </div>
 </label>
 
@@ -13,7 +13,7 @@
 export default {
     data() {
         return {
-            isDarkMode: false,
+            isDarkMode: true,
         };
     },
     mounted() {
