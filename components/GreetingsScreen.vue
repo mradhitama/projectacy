@@ -60,7 +60,7 @@ onUnmounted(() => {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  z-index: 100;
+  z-index: 99;
 }
 
 .slide-in {
