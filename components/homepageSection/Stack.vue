@@ -1,10 +1,14 @@
 <template>
-    <div
-        class="logos flex w-full h-full max-w-full max-h-full place-items-center m-0 p-0 list-none opacity-100 overflow-hidden [mask-image:linear-gradient(to_right,_rgba(0,0,0,0)_0%,_rgb(0,0,0)_25%,_rgb(0,0,0)_75%,_rgba(0,0,0,0)_100%)]">
-        <div v-for="(logo, index) in logos" :key="index" class="logos-slide flex animate-carousel group-hover:paused">
-            <img v-for="(image, idx) in logo.images" :key="idx"
-                class="h-16 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl max-w-none" :src="image.src"
-                :alt="image.alt" :title="image.title" />
+    <div class="w-full max-w-screen-lg mx-auto">
+        <h5 class="font-semibold mb-5">Stack I use</h5>
+        <div
+            class="logos flex w-full h-full max-w-full max-h-full place-items-center m-0 p-0 list-none opacity-100 overflow-hidden [mask-image:linear-gradient(to_right,_rgba(0,0,0,0)_0%,_rgb(0,0,0)_25%,_rgb(0,0,0)_75%,_rgba(0,0,0,0)_100%)]">
+            <div v-for="(logo, index) in logos" :key="index"
+                class="logos-slide flex animate-carousel group-hover:paused">
+                <img v-for="(image, idx) in logo.images" :key="idx"
+                    class="h-16 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl max-w-none" :src="image.src"
+                    :alt="image.alt" :title="image.title" />
+            </div>
         </div>
     </div>
 </template>

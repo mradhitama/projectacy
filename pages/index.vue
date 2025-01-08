@@ -1,26 +1,25 @@
 <template>
     <div class="mask-container"><div style="width:100%;height:100%;background-size:100px;background-repeat:repeat;background-image:url('/texture.png');opacity:0.08;border-radius:0"></div></div>
     <div class="bg-gray-100 dark:bg-darkOcean text-black dark:text-white">
-        <LoadingScreen v-if="isLoading" />
+        <Greetings/>
         <!-- <ComingSoon v-show="!isLoading" /> -->
-        <Hero v-show="!isLoading" />
+        <Hero/>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-import LoadingScreen from "~/components/GreetingsScreen.vue";
+import Greetings from "~/components/Greetings.vue";
 // import ComingSoon from "~/components/homepageSection/ComingSoon.vue";
-import Hero from "~/components/homepageSection/Hero.vue";
-
-const isLoading = ref(true);
-
-onMounted(() => {
-    setTimeout(() => {
-        isLoading.value = false;
-    }, 3000);
-});
+import Hero from "~/components/Homepage.vue";
+// const isLoading = ref(true);
+// onMounted(() => {
+//     setTimeout(() => {
+//         isLoading.value = false;
+//     }, 3000);
+// });
 </script>
+
 <style scoped>
 .mask-container{
     flex: none;
