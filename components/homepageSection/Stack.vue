@@ -32,7 +32,7 @@ export default {
                         { src: '/images/stack/mysql.svg', alt: 'MySQL', title: 'MySQL' },
                         { src: '/images/stack/mongo.svg', alt: 'MongoDB', title: 'MongoDB' },
                         { src: '/images/stack/postman.svg', alt: 'Postman', title: 'Postman' },
-                        { src: '/images/stack/jira.svg', alt: 'Jira', title: 'Jira' }
+                        { src: '/images/stack/git.svg', alt: 'Git', title: 'Git' }
                     ]
                 },
                 {
@@ -49,7 +49,7 @@ export default {
                         { src: '/images/stack/mysql.svg', alt: 'MySQL', title: 'MySQL' },
                         { src: '/images/stack/mongo.svg', alt: 'MongoDB', title: 'MongoDB' },
                         { src: '/images/stack/postman.svg', alt: 'Postman', title: 'Postman' },
-                        { src: '/images/stack/jira.svg', alt: 'Jira', title: 'Jira' }
+                        { src: '/images/stack/git.svg', alt: 'Git', title: 'Git' }
                     ]
                 }
             ]

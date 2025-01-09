@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="">
         <h5 class="text-darkOcean dark:text-white font-bold group">
             Hi, I'm
             <span class="text">
@@ -24,7 +24,7 @@
 
 .text .cy {
     display: inline-block;
-    transition: transform 0.35s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .text .adhitama {
@@ -32,19 +32,19 @@
     top: 0;
     left: 1.1rem;
     opacity: 0;
-    transition: opacity 0.25s ease-in-out 0.25s;
+    transition: opacity 0.2s ease-in-out 0.2s;
 }
 
-.text-container:hover .cy {
+#identity:hover .cy {
     transform: translateX(6rem);
 }
 
-.text-container:hover .adhitama {
+#identity:hover .adhitama {
     opacity: 1;
 }
 
-.text-container:not(:hover) .adhitama {
+#identity:not(:hover) .adhitama {
     opacity: 0;
-    transition: opacity 0.25s ease-out;
+    transition: opacity 0.2s ease-out;
 }
 </style>
