@@ -16,11 +16,12 @@
               <Works />
             </div>
             <div
-              class="box md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full">
-              <Switch />
+              class="box cursor-pointer md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center justify-center h-full">
+              <Other />
             </div>
+            
             <div
-              class="box md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full">
+              class="box md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full">
               <Logo />
             </div>
             <div
@@ -32,8 +33,8 @@
               <Projects />
             </div>
             <div
-              class="box cursor-pointer md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center justify-center h-full">
-              <Articles />
+              class="box md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full">
+              <Switch />
             </div>
             <div
               class="box md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full text-center group">
@@ -68,11 +69,12 @@
 
 <script>
 import About from '~/components/homepageSection/About.vue';
-import Articles from '~/components/homepageSection/Articles.vue';
+import Services from '~/components/homepageSection/Services.vue';
 import Contact from '~/components/homepageSection/Contact.vue';
 import Identity from '~/components/homepageSection/Identity.vue';
 import Logo from '~/components/homepageSection/Logo.vue';
 import Media from '~/components/homepageSection/Media.vue';
+import Other from '~/components/homepageSection/Other.vue';
 import Projects from '~/components/homepageSection/Projects.vue';
 import Resources from '~/components/homepageSection/Resources.vue';
 import Switch from '~/components/homepageSection/Switch.vue';
@@ -82,11 +84,12 @@ import Works from '~/components/homepageSection/Works.vue';
 export default {
   components: {
     About,
-    Articles,
+    Services,
     Contact,
     Identity,
     Logo,
     Media,
+    Other,
     Projects,
     Resources,
     Stack,

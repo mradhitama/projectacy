@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h5 class="text-darkOcean dark:text-white font-bold group">
+        <h5 class="text-darkOcean dark:text-white font-semibold group">
             Hi, I'm
             <span class="text">
                 <span class="a text-greenOcean">A</span><span class="cy text-greenOcean">CY</span>
