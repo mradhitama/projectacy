@@ -11,27 +11,27 @@
               class="box md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center h-full">
               <Identity />
             </div>
-            <div
+            <NuxtLink to="https://projectacy.notion.site/Chandra-Yogi-Adhitama-s-Resume-b3e06f5c6aa7418b9244a9d111f14033" target="_blank"
               class="box cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
               <Works />
-            </div>
+            </NuxtLink>
             <div
               class="box md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full">
               <Other />
             </div>
-            
+
             <div
               class="box md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full">
               <Logo />
             </div>
-            <div
+            <NuxtLink to="#"
               class="box cursor-pointer md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center justify-center h-full group">
               <About />
-            </div>
-            <div
+            </NuxtLink>
+            <NuxtLink to="#"
               class="box cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
               <Projects />
-            </div>
+            </NuxtLink>
             <div
               class="box md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full">
               <Switch />
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- right section -->
         <div
           class="lg:col-span-1 lg:row-span-3 md:col-span-4 md:row-span-1 col-span-1 row-span-1 flex items-center justify-center h-full">
@@ -50,15 +50,15 @@
             class="grid lg:grid-cols-1 lg:grid-rows-3 md:grid-cols-4 md:grid-rows-1 grid-cols-1 grid-rows-1 gap-3 h-full w-full">
             <div
               class="box lg:col-span-1 lg:row-span-1 md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center text-center justify-center h-full">
-              <Media/>
+              <Media />
             </div>
-            <div
+            <NuxtLink to="#"
               class="box cursor-pointer col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center justify-center h-full group">
-              <Resources/>
-            </div>
+              <Resources />
+            </NuxtLink>
             <div
               class="box col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full">
-              <Contact/>
+              <Contact />
             </div>
           </div>
         </div>

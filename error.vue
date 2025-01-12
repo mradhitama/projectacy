@@ -20,7 +20,7 @@
                     class="box cursor-pointer relative md:col-span-3 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
                     <div class="text-center text-black dark:text-white">
                         <h1>{{ error.statusCode }}</h1>
-                        <p class="mt-2 text-gray-500">
+                        <p class="text-gray-500">
                             {{ error.message }}
                         </p>
                         <button class="mt-4 rounded-2xl bg-greenOcean p-3 text-white">
