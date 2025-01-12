@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed inset-0 flex items-center justify-center bg-black z-50"
+    class="fixed inset-0 flex items-center justify-center bg-darkOcean z-50"
     :class="slideClass"
   >
     <div class="text-center">
@@ -55,13 +55,12 @@ onUnmounted(() => {
 
 <style scoped>
 .fixed {
-  background-color: #0E1C1C;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  z-index: 100;
+  z-index: 99;
 }
 
 .slide-in {
@@ -78,7 +77,7 @@ onUnmounted(() => {
 
 @keyframes slideIn {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-100%);
   }
   to {
@@ -93,14 +92,14 @@ onUnmounted(() => {
     transform: translateY(0);
   }
   to {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-100%);
   }
 }
 
 p {
-  color: #E9E3E7;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   font-size: 3rem;
+  font-weight: 400;
 }
 </style>
