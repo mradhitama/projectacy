@@ -14,7 +14,6 @@ import { ref, onMounted, onUnmounted } from "vue";
 
 const greetings = [
   "Hello",
-  "안녕하세요",
   "Hola",
   "مرحبا",
   "Bonjour",
