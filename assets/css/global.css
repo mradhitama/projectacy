@@ -1,12 +1,47 @@
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #E9E3E7;
-    color: #0E1C1C;
-  }
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  line-height: 1.6;
+}
   
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
   
+  /* Typography Standards */
+
+h1 {
+  font-size: 2.986rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.488rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.074rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.728rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.44rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: normal;
+}
