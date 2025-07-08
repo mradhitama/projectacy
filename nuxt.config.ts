@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ['@/assets/css/tailwind.css', '@/assets/css/global.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
   app: {
     head: {
       title: "The ProjectAcy | Discover Limitless Creativity",
