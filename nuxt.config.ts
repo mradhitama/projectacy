@@ -1,7 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ['@/assets/css/tailwind.css', '@/assets/css/global.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxt/image'],
+  image: {
+    domains: ['drive.google.com'],
+  },
   app: {
     head: {
       title: "The ProjectAcy | Discover Limitless Creativity",

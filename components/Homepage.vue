@@ -99,7 +99,7 @@ export default {
   mounted() {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
-      const delay = Math.random() * 2 + 1;
+      const delay = 0.1 + Math.random() * 0.4;
       box.style.animationDelay = `${delay}s`;
     });
   }
