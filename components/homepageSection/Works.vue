@@ -1,6 +1,6 @@
 <template>
-    <img src="/images/work.png" alt="Background"
-        class="absolute inset-0 w-full h-full object-cover transition-all duration-300 lg:scale-100 lg:group-hover:scale-105 scale-105 lg:opacity-100 lg:group-hover:opacity-30 opacity-30">
+    <NuxtImg src="https://drive.google.com/uc?export=view&id=1Sxz60q3Wq9XpPTTY4QRlEDmflGU4d9fr" alt="Background" loading="lazy"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-300 lg:scale-100 lg:group-hover:scale-105 scale-105 lg:opacity-100 lg:group-hover:opacity-30 opacity-30" />
     <h5
         class="relative font-semibold lg:opacity-0 lg:group-hover:opacity-100 opacity-100 transition-opacity duration-300 text-black dark:text-white z-10 flex items-start justify-between">
         <span class="mr-2">Works</span>

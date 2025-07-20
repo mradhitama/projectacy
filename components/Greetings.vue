@@ -1,66 +1,64 @@
 <template>
-  <div
-    class="fixed inset-0 flex items-center justify-center bg-darkOcean z-50"
-    :class="slideClass"
-  >
-    <div class="text-center">
-      <p class="text-4xl font-bold text-white">{{ currentGreeting }}</p>
+  <Transition name="fade">
+    <div v-if="!isDone" class="fixed inset-0 z-50">
+      <div class="absolute inset-0 bg-darkOcean"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-darkOcean to-darkness transition-opacity duration-1000" :class="{'opacity-0': slideClass === 'slide-out'}"></div>
+      <div class="relative flex items-center justify-center h-full" :class="slideClass">
+        <div class="text-center">
+          <p class="text-4xl font-bold text-white">{{ currentGreeting }}</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </Transition>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const emit = defineEmits(['done'])
 
 const greetings = [
-  "Hello",
-  "Hola",
-  "مرحبا",
-  "Bonjour",
-  "Ciao",
-  "Konnichiwa",
-  "नमस्ते",
-  "Sugeng Rawuh",
-  "Halo",
-];
+  'Hello', 'مرحبا', 'Bonjour', 'Hola', 'Ciao',
+  'Konnichiwa', 'नमस्ते', 'Sugeng Rawuh', 'Halo',
+]
 
-const currentGreeting = ref(greetings[0]);
-const slideClass = ref("slide-in");
+const currentGreeting = ref(greetings[0])
+const slideClass = ref('slide-in')
+const isDone = ref(false)
 
-let intervalId;
-let greetingIndex = 0;
+let intervalId
+let greetingIndex = 0
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    greetingIndex++;
+    greetingIndex++
     if (greetingIndex < greetings.length) {
-      currentGreeting.value = greetings[greetingIndex];
+      currentGreeting.value = greetings[greetingIndex]
     } else {
-      clearInterval(intervalId);
+      clearInterval(intervalId)
     }
-  }, 222);
+  }, 222)
 
   setTimeout(() => {
-    slideClass.value = "slide-out"; 
+    slideClass.value = 'slide-out'
     setTimeout(() => {
-      emit("loading-complete");
-    }, 2000);
-  }, greetings.length * 222);
-});
+      isDone.value = true
+      emit('done')
+    }, 1000)
+  }, greetings.length * 222)
+})
 
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
+onUnmounted(() => clearInterval(intervalId))
 </script>
 
 <style scoped>
-.fixed {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  z-index: 99;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 
 .slide-in {
@@ -77,7 +75,7 @@ onUnmounted(() => {
 
 @keyframes slideIn {
   from {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-100%);
   }
   to {
@@ -92,7 +90,7 @@ onUnmounted(() => {
     transform: translateY(0);
   }
   to {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(-100%);
   }
 }

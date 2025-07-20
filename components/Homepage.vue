@@ -11,7 +11,7 @@
               class="box md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center h-full">
               <Identity />
             </div>
-            <NuxtLink to="https://projectacy.notion.site/Chandra-Yogi-Adhitama-s-Resume-b3e06f5c6aa7418b9244a9d111f14033" target="_blank"
+            <NuxtLink to="https://drive.google.com/file/d/1Yo17cSwMsdO1tbFpbQk5HRtFcroE9Jjc/view?usp=drive_link" target="_blank"
               class="box cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
               <Works />
             </NuxtLink>
@@ -24,11 +24,11 @@
               class="box md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full">
               <Logo />
             </div>
-            <NuxtLink to="#"
+            <NuxtLink to="about"
               class="box cursor-pointer md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center justify-center h-full group">
               <About />
             </NuxtLink>
-            <NuxtLink to="#"
+            <NuxtLink to="projects"
               class="box cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
               <Projects />
             </NuxtLink>
@@ -99,7 +99,7 @@ export default {
   mounted() {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
-      const delay = Math.random() * 2 + 1;
+      const delay = 0.1 + Math.random() * 0.4;
       box.style.animationDelay = `${delay}s`;
     });
   }
