@@ -1,16 +1,12 @@
 <template>
   <div class="relative min-h-screen bg-gray-100 dark:bg-darkOcean overflow-hidden transition-colors duration-300">
-    <div class="mask-container pointer-events-none">
-      <div class="texture-layer"></div>
-    </div>
-
     <Transition 
       name="greeting-fade" 
       mode="out-in"
       @after-leave="onGreetingComplete"
     >
       <Greetings
-        v-if="!greetingDone"
+        v-if="showGreeting"
         class="fixed inset-0 z-50"
         :dark-mode="isDark"
         @done="onGreetingDone"
@@ -29,9 +25,10 @@
 
 <script setup>
 import Greetings from '~/components/Greetings.vue'
-import { defineAsyncComponent, ref, watchEffect } from 'vue'
+import { defineAsyncComponent, ref, watchEffect, onMounted } from 'vue'
 
 const greetingDone = ref(false)
+const showGreeting = ref(false)
 const showHomepage = ref(false)
 const isDark = ref(false)
 
@@ -53,15 +50,25 @@ onMounted(() => {
     darkMediaQuery.addEventListener('change', (e) => {
       isDark.value = e.matches
     })
+
+    const hasSeenGreeting = sessionStorage.getItem('hasSeenGreeting')
+    if (!hasSeenGreeting) {
+      showGreeting.value = true
+    } else {
+      greetingDone.value = true
+      showHomepage.value = true
+    }
   }
 })
 
 const onGreetingDone = () => {
   greetingDone.value = true
+  showHomepage.value = true
+  sessionStorage.setItem('hasSeenGreeting', 'true')
 }
 
 const onGreetingComplete = () => {
-  showHomepage.value = true
+  showGreeting.value = false
 }
 
 const AsyncHomepage = defineAsyncComponent({
@@ -72,25 +79,6 @@ const AsyncHomepage = defineAsyncComponent({
 </script>
 
 <style scoped>
-.mask-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 999;
-}
-
-.texture-layer {
-  width: 100%;
-  height: 100%;
-  background-image: url('/texture.png');
-  background-repeat: repeat;
-  opacity: 0.13;
-  background-size: 100px;
-}
-
 .greeting-fade-enter-active,
 .greeting-fade-leave-active {
   transition: opacity 0.4s ease;

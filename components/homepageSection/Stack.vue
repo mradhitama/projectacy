@@ -5,9 +5,20 @@
             class="logos flex w-full h-full max-w-full max-h-full place-items-center m-0 p-0 list-none opacity-100 overflow-hidden [mask-image:linear-gradient(to_right,_rgba(0,0,0,0)_0%,_rgb(0,0,0)_25%,_rgb(0,0,0)_75%,_rgba(0,0,0,0)_100%)]">
             <div v-for="(logo, index) in logos" :key="index"
                 class="logos-slide flex animate-carousel group-hover:paused">
-                <NuxtImg v-for="(image, idx) in logo.images" :key="idx"
-                    class="h-16 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl max-w-none" :src="image.src"
-                    :alt="image.alt" :title="image.title" format="webp" sizes="100px" loading="lazy" />
+                <template v-if="loading">
+                    <!-- Skeleton Loading -->
+                    <div v-for="n in 5" :key="`skeleton-${n}`"
+                        class="h-16 w-24 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl flex items-center justify-center">
+                        <div class="h-10 w-20 bg-gray-300 dark:bg-gray-700 rounded-lg animate-pulse"></div>
+                    </div>
+                </template>
+
+                <template v-else>
+                    <!-- Actual Content -->
+                    <NuxtImg v-for="(image, idx) in logo.images" :key="idx"
+                        class="h-16 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl max-w-none" :src="image.src"
+                        :alt="image.alt" :title="image.title" format="webp" sizes="100px" loading="lazy" />
+                </template>
             </div>
         </div>
     </div>

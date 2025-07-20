@@ -5,6 +5,11 @@ export default defineNuxtConfig({
   image: {
     domains: ['drive.google.com'],
   },
+  sitemap: {
+    exclude: [
+      '/template',
+    ]
+  },
   app: {
     head: {
       title: "The ProjectAcy | Discover Limitless Creativity",
