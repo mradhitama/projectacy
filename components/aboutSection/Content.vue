@@ -84,17 +84,33 @@
 
 <style scoped>
 .box-content-scroll {
-    mask-image: linear-gradient(to bottom,
-            transparent 5%,
-            black 10%,
-            black 80%,
-            transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom,
-            transparent 5%,
-            black 10%,
-            black 80%,
-            transparent 100%);
+  mask-image: linear-gradient(to bottom,
+    transparent 5%,
+    black 10%, 
+    black 80%, 
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom,
+    transparent 5%,
+    black 10%, 
+    black 80%, 
+    transparent 100%);
 }
+
+@media (min-width: 768px) {
+  .box-content-scroll {
+    mask-image: linear-gradient(to bottom,
+      transparent 5%,
+      black 15%, 
+      black 75%, 
+      transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+      transparent 5%,
+      black 15%, 
+      black 75%, 
+      transparent 100%);
+  }
+}
+
 
 .custom-scrollbar::-webkit-scrollbar {
     width: 8px;

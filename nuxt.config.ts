@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ['@/assets/css/tailwind.css', '@/assets/css/global.css'],
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxt/image', '@nuxt/fonts'],
   image: {
     domains: ['drive.google.com'],
   },
@@ -49,9 +49,21 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Varela+Round&display=swap' }
       ],
     },
+  },
+  fonts: {
+    provider: 'none',
+    families: [
+      {
+        name: 'Varela Round',
+        src: '/fonts/VarelaRound-Regular.woff2',
+        preload: true,
+        display: 'swap',
+        weight: '400',
+        style: 'normal'
+      }
+    ]
   },
   compatibilityDate: '2024-11-01',
   devtools: {enabled: process.env.NODE_ENV === "development" }
