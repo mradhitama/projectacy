@@ -16,7 +16,13 @@
                 <NuxtLink to="https://drive.google.com/file/d/1Yo17cSwMsdO1tbFpbQk5HRtFcroE9Jjc/view?usp=drive_link"
                     target="_blank"
                     class="box order-4 lg:order-3 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
-                    <Download />
+                    <div class="transition-opacity duration-300 group-hover:opacity-0">
+                        <Download />
+                    </div>
+                    <span
+                        class="absolute text-white text-sm font-medium opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        Get Resume
+                    </span>
                 </NuxtLink>
                 <div
                     class="box order-5 lg:order-4 cursor-pointer relative md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">

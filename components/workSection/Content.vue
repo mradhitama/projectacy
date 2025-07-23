@@ -4,17 +4,18 @@
             <!-- Main Section -->
             <section class="bg-gray-200 dark:bg-zinc-900 p-10 pb-20 rounded-2xl shadow-lg">
                 <figure>
-                    <NuxtImg src="https://drive.google.com/uc?export=view&id=1S6lZ6EB_rCYZSRkCS4md_K9WJ1_N0ALr"
+                    <NuxtImg
+                        src="https://images.unsplash.com/photo-1623479322729-28b25c16b011?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         alt="Business Analysis" class="w-full h-52 object-cover rounded-xl mb-4" loading="lazy" />
                     <figcaption class="text-xs text-gray-400 mt-1 mb-8">
                         Photo by <a
-                            href="https://unsplash.com/@sigmund?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sigmund</a>
-                        on <a
-                            href="https://unsplash.com/photos/people-sitting-on-chair-in-front-of-computer-monitor-Fa9b57hffnM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            href="https://unsplash.com/@afgprogrammer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mohammad
+                            Rahmani</a> on <a
+                            href="https://unsplash.com/photos/man-in-black-long-sleeve-shirt-using-computer-_Fx34KeqIEw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
                     </figcaption>
                 </figure>
 
-                <h1>Hey, I’m Chandra 👋</h1>
+                <h1>Hey, I’m Adhitama 👋</h1>
                 <p>Welcome to <span class="highlight">Projectacy</span> — a space where ideas, curiosity, and clean code
                     come together.
                 </p>
@@ -92,7 +93,7 @@
                         target="_blank">linkedin.com/in/chandradhitama</a>
                 </p>
 
-                <p>Thanks for stopping by — hope our paths cross soon 🤍</p>
+                <p>Thanks for stopping by — hope our paths cross soon!</p>
 
             </section>
         </article>
@@ -191,16 +192,8 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-a {
-    color: #0d47a1;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #1e88e5;
-}
 .highlight {
-      font-weight: bold;
-      color: #1f4ca4;
-    }
+    font-weight: bold;
+    color: #1f4ca4;
+}
 </style>
