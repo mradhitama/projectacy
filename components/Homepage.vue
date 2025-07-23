@@ -11,7 +11,7 @@
               class="box order-2 lg:order-1 md:col-span-2 md:row-span-1 col-span-1 row-span-1 p-8 bg-white hover:bg-gray-200 dark:bg-darkOcean dark:hover:bg-deepOcean rounded-2xl shadow flex items-center h-full">
               <Identity />
             </div>
-            <NuxtLink to="https://drive.google.com/file/d/1Yo17cSwMsdO1tbFpbQk5HRtFcroE9Jjc/view?usp=drive_link" target="_blank"
+            <NuxtLink to="works"
               class="box order-4 lg:order-2 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
               <Works />
             </NuxtLink>
