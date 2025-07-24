@@ -39,64 +39,78 @@
                     </p>
                 </div>
 
-                <h2 class="text-2xl font-semibold mb-4">What I Care About</h2>
+                <h2 class="text-2xl font-semibold mb-8">What I Care About</h2>
 
-                <figure>
-                    <NuxtImg
-                        src="https://images.unsplash.com/photo-1617228679684-890412dc57a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Simple yet deep system sketch" class="w-full h-52 object-cover rounded-xl mb-2"
-                        loading="lazy" />
-                    <figcaption class="text-xs text-gray-400 mb-3">
-                        Photo by <a
-                            href="https://unsplash.com/@sajadnori?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sajad
-                            Nori</a> on <a
-                            href="https://unsplash.com/photos/person-holding-black-and-white-round-ornament-21mJd5NUGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                    </figcaption>
-                </figure>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div>
+                        <figure>
+                            <NuxtImg
+                                src="https://images.unsplash.com/photo-1617228679684-890412dc57a5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Simple yet deep system sketch" class="w-full h-52 object-cover rounded-xl mb-2"
+                                loading="lazy" />
+                            <figcaption class="text-xs text-gray-400 mb-3">
+                                Photo by <a
+                                    href="https://unsplash.com/@sajadnori?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sajad
+                                    Nori</a> on <a
+                                    href="https://unsplash.com/photos/person-holding-black-and-white-round-ornament-21mJd5NUGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            </figcaption>
+                        </figure>
+                        <p>
+                            <strong>Simplicity with depth</strong>: I believe in building systems that feel effortless
+                            on the
+                            surface,
+                            but are thoughtfully designed underneath—like a well-crafted book that’s easy to read yet
+                            leaves you
+                            thinking long after.
+                        </p>
+                    </div>
 
-                <p class="mb-12">
-                    <strong>Simplicity with depth</strong>: I believe in building systems that feel effortless on the
-                    surface,
-                    but are thoughtfully designed underneath—like a well-crafted book that’s easy to read yet leaves you
-                    thinking long after.
-                </p>
+                    <!-- Card 2 -->
+                    <div>
+                        <figure>
+                            <NuxtImg
+                                src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1470&q=80"
+                                alt="Tech listening and adapting" class="w-full h-52 object-cover rounded-xl mb-2"
+                                loading="lazy" />
+                            <figcaption class="text-xs text-gray-400 mb-3">
+                                Photo by <a
+                                    href="https://unsplash.com/@ffstop?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fotis
+                                    Fotopoulos</a> on <a
+                                    href="https://unsplash.com/photos/black-remote-control-on-red-table-6sAl6aQ4OWI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            </figcaption>
+                        </figure>
+                        <p>
+                            <strong>Tech that listens</strong>: Good tech should adapt to human needs, not the other way
+                            around.
+                            It should reduce friction, understand the context, and quietly support without being
+                            intrusive.
+                        </p>
+                    </div>
 
-                <figure>
-                    <NuxtImg
-                        src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=1470&q=80"
-                        alt="Tech listening and adapting" class="w-full h-52 object-cover rounded-xl mb-2"
-                        loading="lazy" />
-                    <figcaption class="text-xs text-gray-400 mb-3">
-                        Photo by <a
-                            href="https://unsplash.com/@ffstop?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Fotis
-                            Fotopoulos</a> on <a
-                            href="https://unsplash.com/photos/black-remote-control-on-red-table-6sAl6aQ4OWI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                    </figcaption>
-                </figure>
+                    <!-- Card 3 -->
+                    <div>
+                        <figure>
+                            <NuxtImg
+                                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Prototyping ideas through hands-on learning"
+                                class="w-full h-52 object-cover rounded-xl mb-2" loading="lazy" />
+                            <figcaption class="text-xs text-gray-400 mb-3">
+                                Photo by <a
+                                    href="https://unsplash.com/@alvarordesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alvaro
+                                    Reyes</a> on <a
+                                    href="https://unsplash.com/photos/person-working-on-blue-and-white-paper-on-board-qWwpHwip31M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                            </figcaption>
+                        </figure>
+                        <p>
+                            <strong>Learning by making</strong>: For me, learning sticks best when it's messy, hands-on,
+                            and
+                            full of discovery.
+                            Prototypes and side projects are my way of thinking out loud and testing what works.
+                        </p>
+                    </div>
+                </div>
 
-                <p class="mb-12">
-                    <strong>Tech that listens</strong>: Good tech should adapt to human needs, not the other way around.
-                    It should reduce friction, understand the context, and quietly support without being intrusive.
-                </p>
-
-                <figure>
-                    <NuxtImg
-                        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Prototyping ideas through hands-on learning"
-                        class="w-full h-52 object-cover rounded-xl mb-2" loading="lazy" />
-                    <figcaption class="text-xs text-gray-400 mb-3">
-                        Photo by <a
-                            href="https://unsplash.com/@alvarordesign?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alvaro
-                            Reyes</a> on <a
-                            href="https://unsplash.com/photos/person-working-on-blue-and-white-paper-on-board-qWwpHwip31M?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                    </figcaption>
-                </figure>
-
-                <p class="mb-12">
-                    <strong>Learning by making</strong>: For me, learning sticks best when it's messy, hands-on, and
-                    full of discovery.
-                    Prototypes and side projects are my way of thinking out loud and testing what works.
-                </p>
                 <div class="mt-12 text-center">
                     <p class="italic text-lg">
                         “We craft our creations, then our creations craft us.”

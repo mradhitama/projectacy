@@ -21,7 +21,7 @@
                 </p>
                 <br>
                 <p>
-                    The name’s Chandra Yogi Adhitama, but you can just call me Chandra. Originally from the calm and
+                    The name’s Chandra Yogi Adhitama, but you can just call me Adhitama or Chandra. Originally from the calm and
                     green lands of Lampung, I’ve been living and building my career in
                     Jakarta since 2019. I came here with big dreams, a backpack full of code (and coffee), and a heart
                     full of curiosity about how tech can solve real-life problems.
@@ -36,25 +36,66 @@
 
                 <h4>My Story So Far</h4>
 
-                <p><strong>2023 – Present</strong><br />
-                    Currently working with PT Astra Welab Digital Arta (through PT Padepokan Tujuh Sembilan) on a
-                    mission to reshape digital finance with <span class="highlight">Maucash</span>. I’ve been helping
-                    transition their product from traditional cash loans to more productive financial services —
-                    building scalable backend systems, improving compliance, and trimming unused infrastructure to save
-                    costs.</p><br>
+                <!-- Card 1 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center mt-10 mb-16">
+                    <div class="mx-auto ">
+                        <NuxtImg src="https://drive.google.com/uc?export=view&id=1qBLJZlsAT6QGCDczBGgXksJxnuIQ_JzD"
+                            alt="Construction Building" class="rounded-xl w-full h-64 object-cover" />
+                    </div>
+                    <div>
+                        <p class="text-4xl font-light text-gray-400 dark:text-gray-300 mb-2"><span
+                                class="text-sm tracking-widest">2023 - Present</span></p>
+                        <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mb-3">Maucash</h3>
+                        <p class="text-gray-600 dark:text-white">
+                            Currently working with PT Astra Welab Digital Arta (through PT Padepokan Tujuh Sembilan) on
+                            a mission to reshape digital finance with <span class="highlight">Maucash</span>. I’ve been
+                            helping transition their product from traditional cash loans to more productive financial
+                            services — building scalable backend systems, improving compliance, and trimming unused
+                            infrastructure to save costs.
+                        </p>
+                    </div>
+                </div>
 
-                <p><strong>2022 – 2023</strong><br />
-                    Took the lead as a Fullstack Developer at PT Famindo Kunci Sukses to launch <span
-                        class="highlight">Sekolah Kripto Indonesia</span>, an educational platform designed to tackle
-                    crypto misinformation and bring clarity to the community. From system architecture to frontend
-                    features, we launched the MVP in under 6 months and supported everything from articles to live
-                    workshops.</p><br>
+                <!-- Card 2 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+                    <div class="order-2 md:order-1 md:text-right">
+                        <p class="text-4xl font-light text-gray-400 dark:text-gray-300 mb-2"><span
+                                class="text-sm tracking-widest">2022 - 2023</span></p>
+                        <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mb-3">SKI</h3>
+                        <p class="text-gray-600 dark:text-white">
+                            Took the lead as a Fullstack Developer at PT Famindo Kunci Sukses to launch <span
+                                class="highlight">Sekolah Kripto Indonesia</span>, an educational platform designed to
+                            tackle crypto misinformation and bring clarity to the community. From system architecture to
+                            frontend features, we launched the MVP in under 6 months and supported everything from
+                            articles to
+                            live workshops.
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2 mx-auto ">
+                        <NuxtImg src="https://drive.google.com/uc?export=view&id=1Ylxe_iWOgfEob-HJtaG3LcXqWbthdAG-"
+                            alt="Interior Design" class="rounded-xl w-full h-64 object-cover" />
+                    </div>
+                </div>
 
-                <p><strong>2019 – 2022</strong><br />
-                    Spent a few exciting years at AGIT (outsourced to Astra International) developing eCommerce
-                    platforms like <span class="highlight">Auto2000 Digiroom</span> and <span
-                        class="highlight">Seva</span>. It was a deep dive into enterprise-level architecture, SAP
-                    Hybris, and building high-performance systems that support thousands of users across regions.</p>
+                <!-- Card 3 -->
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-16">
+                    <div class="mx-auto ">
+                        <NuxtImg src="https://drive.google.com/uc?export=view&id=1dG_AN9VDuMtyX1ZKV94Pw-CoBsx7mOxk"
+                            alt="Renovation" class="rounded-xl w-full h-64 object-cover" />
+                    </div>
+                    <div>
+                        <p class="text-4xl font-light text-gray-400 dark:text-gray-300 mb-2"><span
+                                class="text-sm tracking-widest">2019 – 2022</span></p>
+                        <h3 class="text-2xl font-bold text-gray-700 dark:text-gray-100 mb-3">Auto2000 Digiroom</h3>
+                        <p class="text-gray-600 dark:text-white">
+                            Spent a few exciting years at AGIT (outsourced to Astra International) developing eCommerce
+                            platforms like <span class="highlight">Auto2000 Digiroom</span> and <span
+                                class="highlight">Seva</span>. It was a deep dive into enterprise-level architecture,
+                            SAP Commerce Cloud/Hybris, and building high-performance systems that support thousands of users across
+                            regions.
+                        </p>
+                    </div>
+                </div>
                 <hr style="border: none; border-top: 1px solid #333; margin: 1.5rem 0;" />
 
                 <h4>What I Love Doing</h4>
@@ -69,16 +110,6 @@
                     services with Docker, tuning performance, or explaining system flows to non-technical folks — I love
                     being the bridge between tech and people.
                 </p>
-                <hr style="border: none; border-top: 1px solid #333; margin: 1.5rem 0;" />
-
-                <h4>My Tech Toolbox</h4>
-                <p><strong>Languages & Frameworks:</strong> Java, Golang, PHP, Node.js, Spring Boot, Next.js, Nuxt.js
-                </p>
-                <p><strong>Backend & Infra:</strong> REST API, GraphQL, Kafka, RabbitMQ, Redis, MongoDB, MySQL, Docker
-                </p>
-                <p><strong>DevOps & Tools:</strong> Jenkins, DigitalOcean, Apollo, JumpServer, ElasticJob</p>
-                <p><strong>Search & Optimization:</strong> Apache Solr, Elasticsearch, Performance Tuning</p>
-                <p><strong>Workflow:</strong> Git, Notion, Confluence, Jira, Agile Scrum</p>
                 <hr style="border: none; border-top: 1px solid #333; margin: 1.5rem 0;" />
 
                 <h4>Let’s Connect</h4>
