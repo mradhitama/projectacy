@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     ]
   },
   app: {
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in'
+    },
     head: {
       title: "The ProjectAcy | Discover Limitless Creativity",
       meta: [

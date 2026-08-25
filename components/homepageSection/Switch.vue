@@ -1,125 +1,44 @@
 <template>
-    <div class="text-center">
-        <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer" :checked="isDarkMode" @change="toggleDarkMode" />
-            <div
-                class="w-20 h-12 bg-gray-500 rounded-full border-8 border-gray-500 peer-checked:bg-yellow-500 peer-checked:border-gray-500 transition-all">
-            </div>
-            <div
-                class="w-8 h-8 bg-yellow-500 rounded-full absolute left-10 peer-checked:left-6 peer-checked:bg-gray-500 peer-checked:w-14 peer-checked:h-10 transition-all flex items-center justify-center">
-            </div>
+  <button 
+    @click="toggleTheme" 
+    class="relative p-4 rounded-full hover:bg-gray-100 dark:hover:bg-deepOcean transition-all duration-300 flex items-center justify-center group overflow-hidden focus:outline-none focus:ring-2 focus:ring-greenOcean/40 shadow-sm border border-black/5 dark:border-white/5 bg-white/40 dark:bg-black/20"
+    aria-label="Toggle dark mode"
+  >
+    <div class="relative w-8 h-8 flex items-center justify-center">
+      <!-- Sun Icon -->
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke-width="1.8" 
+        stroke="currentColor" 
+        class="w-7 h-7 text-yellow-500 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] transform"
+        :class="isDark ? 'rotate-90 scale-0 opacity-0' : 'rotate-0 scale-100 opacity-100'"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 21v-2.25m-6.364-.386 1.591-1.591M3 12h2.25m.386-6.364 1.591 1.591M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+      </svg>
 
-        </label>
+      <!-- Moon Icon -->
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke-width="1.8" 
+        stroke="currentColor" 
+        class="w-7 h-7 text-indigo-400 absolute transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] transform"
+        :class="isDark ? 'rotate-0 scale-100 opacity-100' : '-rotate-90 scale-0 opacity-0'"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+      </svg>
     </div>
+  </button>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            isDarkMode: false,
-            usingSystemTheme: true
-        };
-    },
-    mounted() {
-        console.log('[Theme] Component mounted, initializing theme...');
-        this.initTheme();
-    },
-    methods: {
-        initTheme() {
-            console.groupCollapsed('[Theme] Initializing theme');
-            
-            const savedTheme = localStorage.getItem('theme');
-            console.log(`[Theme] Saved theme from localStorage: ${savedTheme || 'none'}`);
-            
-            if (savedTheme) {
-                this.isDarkMode = savedTheme === 'dark';
-                this.usingSystemTheme = false;
-                console.log(`[Theme] Using saved preference: ${savedTheme}`);
-            } else {
-                console.log('[Theme] No saved preference, detecting system theme');
-                this.detectSystemTheme();
-            }
-            
-            console.log(`[Theme] Final mode: ${this.isDarkMode ? 'dark' : 'light'} (${this.usingSystemTheme ? 'system' : 'manual'})`);
-            this.applyTheme();
-            this.setupSystemListener();
-            
-            console.groupEnd();
-        },
+<script setup>
+import { useTheme } from '~/composables/useTheme'
 
-        detectSystemTheme() {
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            console.log(`[Theme] System prefers dark mode: ${systemPrefersDark}`);
-            
-            this.isDarkMode = systemPrefersDark;
-            this.usingSystemTheme = true;
-        },
-
-        setupSystemListener() {
-            console.log('[Theme] Setting up system theme listener');
-            
-            const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            
-            colorSchemeQuery.addEventListener('change', (e) => {
-                console.groupCollapsed(`[Theme] System theme changed to ${e.matches ? 'dark' : 'light'}`);
-                console.log(`[Theme] Currently using system theme: ${this.usingSystemTheme}`);
-                
-                if (this.usingSystemTheme) {
-                    console.log('[Theme] Applying system theme change');
-                    this.isDarkMode = e.matches;
-                    this.applyTheme();
-                } else {
-                    console.log('[Theme] Ignoring system change (using manual preference)');
-                }
-                
-                console.groupEnd();
-            });
-        },
-
-        applyTheme() {
-            console.groupCollapsed(`[Theme] Applying ${this.isDarkMode ? 'dark' : 'light'} theme`);
-            
-            if (this.isDarkMode) {
-                document.documentElement.classList.add('dark');
-                console.log('[Theme] Added "dark" class to documentElement');
-            } else {
-                document.documentElement.classList.remove('dark');
-                console.log('[Theme] Removed "dark" class from documentElement');
-            }
-            
-            console.log('[Theme] Current document classes:', document.documentElement.classList);
-            console.groupEnd();
-        },
-
-        toggleDarkMode() {
-            console.groupCollapsed('[Theme] Toggling theme');
-            
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            console.log(`[Theme] Current system preference: ${systemPrefersDark ? 'dark' : 'light'}`);
-            console.log(`[Theme] Current state: ${this.isDarkMode ? 'dark' : 'light'} (${this.usingSystemTheme ? 'system' : 'manual'})`);
-            
-            const togglingToSystem = (!this.isDarkMode && systemPrefersDark) || 
-                                    (this.isDarkMode && !systemPrefersDark);
-            
-            this.isDarkMode = !this.isDarkMode;
-            this.usingSystemTheme = togglingToSystem;
-            
-            console.log(`[Theme] New state: ${this.isDarkMode ? 'dark' : 'light'} (${this.usingSystemTheme ? 'system' : 'manual'})`);
-            
-            if (togglingToSystem) {
-                localStorage.removeItem('theme');
-                console.log('[Theme] Removed theme from localStorage (reverting to system)');
-            } else {
-                localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
-                console.log(`[Theme] Saved ${this.isDarkMode ? 'dark' : 'light'} theme to localStorage`);
-            }
-            
-            this.applyTheme();
-            console.groupEnd();
-        }
-    }
-};
+const { isDark, toggleTheme } = useTheme()
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

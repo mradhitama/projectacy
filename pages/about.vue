@@ -1,26 +1,37 @@
 <template>
-    <section class="page flex justify-center items-center min-h-screen bg-opacity-50 mx-auto">
+    <section class="page flex justify-center items-center h-screen mx-auto p-3 lg:p-4 select-none">
         <div
-            class="lg:bg-gray-100 dark:bg-darkness lg:bg-opacity-80 lg:backdrop-blur-lg shadow-lg lg:rounded-2xl p-3 gap-3 lg:w-screen lg:h-screen">
+            class="lg:bg-white/10 dark:bg-black/20 lg:backdrop-blur-xl shadow-2xl lg:rounded-3xl p-3 gap-3 lg:w-screen lg:h-screen lg:max-h-screen flex items-center justify-center border border-white/5 dark:border-white/5">
             <div
-                class="grid lg:grid-cols-5 lg:grid-rows-3 md:grid-cols-4 md:grid-rows-4 grid-cols-1 grid-rows-1 gap-3 h-full">
+                class="grid lg:grid-cols-5 lg:grid-rows-3 md:grid-cols-4 md:grid-rows-4 grid-cols-1 gap-3 h-full w-full">
+                <!-- Back Button Card -->
                 <div @click="$router.go(-1)"
-                    class="box order-1 sm:order-1 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-greenOcean dark:bg-deepGreenOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden"
+                    class="box order-1 sm:order-1 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 p-8 bg-gradient-to-br from-greenOcean to-deepGreenOcean dark:from-greenOcean/80 dark:to-deepGreenOcean/90 border border-greenOcean/15 dark:border-greenOcean/5 rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
                     role="button" tabindex="0" @keyup.enter="$router.go(-1)">
                     <Back />
                 </div>
+                
+                <!-- Main Content Card -->
                 <div
-                    class="box order-3 lg:order-2 relative md:col-span-3 md:row-span-3 col-span-1 row-span-1 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
+                    class="box order-3 lg:order-2 relative md:col-span-3 md:row-span-3 col-span-1 bg-white/70 dark:bg-darkOcean/60 border border-black/5 dark:border-white/5 backdrop-blur-md rounded-2xl shadow-sm flex items-center justify-center h-full group overflow-hidden">
                     <Content />
                 </div>
+
+                <!-- Left-side decorative empty card 1 -->
                 <div
-                    class="box order-4 lg:order-3 cursor-pointer relative md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
+                    class="box order-4 lg:order-3 relative md:col-span-1 md:row-span-2 col-span-1 p-8 bg-white/40 dark:bg-darkOcean/30 border border-black/[0.02] dark:border-white/[0.02] backdrop-blur-sm rounded-2xl shadow-sm flex items-center justify-center h-full group overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(73,113,110,0.06),transparent)]"></div>
                 </div>
+
+                <!-- Left-side decorative empty card 2 -->
                 <div
-                    class="box order-5 lg:order-4 cursor-pointer relative md:col-span-1 md:row-span-2 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
+                    class="box order-5 lg:order-4 relative md:col-span-1 md:row-span-2 col-span-1 p-8 bg-white/40 dark:bg-darkOcean/30 border border-black/[0.02] dark:border-white/[0.02] backdrop-blur-sm rounded-2xl shadow-sm flex items-center justify-center h-full group overflow-hidden">
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(73,113,110,0.06),transparent)]"></div>
                 </div>
+
+                <!-- Switch Card -->
                 <div
-                    class="box order-2 lg:order-5 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 row-span-1 p-8 bg-white dark:bg-darkOcean rounded-2xl shadow flex items-center justify-center h-full group overflow-hidden">
+                    class="box order-2 lg:order-5 cursor-pointer relative md:col-span-1 md:row-span-1 col-span-1 p-8 bg-white/70 hover:bg-white/90 dark:bg-darkOcean/60 dark:hover:bg-darkOcean/80 border border-black/5 dark:border-white/5 backdrop-blur-md rounded-2xl shadow-sm flex items-center justify-center h-full group overflow-hidden hover:-translate-y-0.5 hover:shadow-md transition-all duration-300">
                     <Switch />
                 </div>
             </div>
@@ -29,46 +40,22 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import Switch from '~/components/homepageSection/Switch.vue';
 import Back from '~/components/aboutSection/Back.vue';
 import Content from '~/components/aboutSection/Content.vue';
+
 defineProps(['error'])
+
+onMounted(() => {
+  if (process.client) {
+    const boxes = document.querySelectorAll('.box')
+    boxes.forEach((box, index) => {
+      box.style.animationDelay = `${index * 60 + 100}ms`
+    })
+  }
+})
 </script>
 
 <style scoped>
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-.box {
-    opacity: 0;
-    animation: fadeInUp 0.5s ease-in forwards;
-}
-
-@media (min-width: 768px) and (orientation: portrait) {
-  .portrait\:md-row-span-1 {
-    grid-row: span 1 / span 1;
-  }
-}
-@media (min-width: 768px) and (orientation: landscape) {
-  .landscape\:md-row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-}
-@media (max-width: 767px) and (orientation: portrait) {
-  .portrait\:sm-row-span-1 {
-    grid-row: span 1 / span 1;
-  }
-}
-@media (max-width: 767px) and (orientation: landscape) {
-  .landscape\:sm-row-span-2 {
-    grid-row: span 2 / span 2;
-  }
-}
 </style>

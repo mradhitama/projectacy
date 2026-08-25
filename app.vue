@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="h-screen bg-gray-50 dark:bg-darkness text-black dark:text-white transition-colors duration-500">
     <div class="mask-container pointer-events-none">
       <div class="texture-layer"></div>
     </div>
@@ -11,6 +11,10 @@
 
 <script setup>
 import "~/assets/css/global.css";
+import { useTheme } from "~/composables/useTheme";
+
+const { initTheme } = useTheme();
+initTheme();
 </script>
 
 <style scoped>

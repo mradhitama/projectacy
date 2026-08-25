@@ -1,5 +1,8 @@
 <template>
-  <div class="relative min-h-screen bg-gray-100 dark:bg-darkOcean overflow-hidden transition-colors duration-300">
+  <div class="relative h-screen bg-gray-50 dark:bg-darkness overflow-hidden transition-colors duration-500">
+    <!-- Animated background grid pattern for depth -->
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#8080800d_1px,transparent_1px),linear-gradient(to_bottom,#8080800d_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)]"></div>
+
     <Transition 
       name="greeting-fade" 
       mode="out-in"
@@ -8,7 +11,6 @@
       <Greetings
         v-if="showGreeting"
         class="fixed inset-0 z-50"
-        :dark-mode="isDark"
         @done="onGreetingDone"
       />
     </Transition>
@@ -25,32 +27,14 @@
 
 <script setup>
 import Greetings from '~/components/Greetings.vue'
-import { defineAsyncComponent, ref, watchEffect, onMounted } from 'vue'
+import { defineAsyncComponent, ref, onMounted } from 'vue'
 
 const greetingDone = ref(false)
 const showGreeting = ref(false)
 const showHomepage = ref(false)
-const isDark = ref(false)
-
-watchEffect(() => {
-  if (process.client) {
-    if (isDark.value) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }
-})
 
 onMounted(() => {
   if (process.client) {
-    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    isDark.value = darkMediaQuery.matches
-    
-    darkMediaQuery.addEventListener('change', (e) => {
-      isDark.value = e.matches
-    })
-
     const hasSeenGreeting = sessionStorage.getItem('hasSeenGreeting')
     if (!hasSeenGreeting) {
       showGreeting.value = true
@@ -81,7 +65,7 @@ const AsyncHomepage = defineAsyncComponent({
 <style scoped>
 .greeting-fade-enter-active,
 .greeting-fade-leave-active {
-  transition: opacity 0.4s ease;
+  transition: opacity 0.6s cubic-bezier(0.76, 0, 0.24, 1);
 }
 .greeting-fade-enter-from,
 .greeting-fade-leave-to {
@@ -89,7 +73,7 @@ const AsyncHomepage = defineAsyncComponent({
 }
 
 .homepage-fade-enter-active {
-  transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
 }
 .homepage-fade-enter-from {
   opacity: 0;

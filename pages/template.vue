@@ -1,5 +1,5 @@
 <template>
-    <section class="page flex justify-center items-center min-h-screen bg-opacity-50 mx-auto">
+    <section class="page flex justify-center items-center h-screen bg-opacity-50 mx-auto">
         <div
             class="lg:bg-gray-100 dark:bg-darkness lg:bg-opacity-80 lg:backdrop-blur-lg shadow-lg lg:rounded-2xl p-3 gap-3 lg:w-screen lg:h-screen">
             <div

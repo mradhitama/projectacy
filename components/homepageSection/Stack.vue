@@ -1,24 +1,19 @@
 <template>
-    <div class="w-full max-w-screen-lg mx-auto">
-        <h5 class="font-semibold mb-5">Stack I use</h5>
+    <div class="w-full max-w-screen-lg mx-auto flex flex-col justify-center">
+        <h6 class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mb-4 text-left select-none">Stack I use</h6>
         <div
-            class="logos flex w-full h-full max-w-full max-h-full place-items-center m-0 p-0 list-none opacity-100 overflow-hidden [mask-image:linear-gradient(to_right,_rgba(0,0,0,0)_0%,_rgb(0,0,0)_25%,_rgb(0,0,0)_75%,_rgba(0,0,0,0)_100%)]">
+            class="logos flex w-full place-items-center m-0 p-0 overflow-hidden relative [mask-image:linear-gradient(to_right,_rgba(0,0,0,0)_0%,_rgb(0,0,0)_12%,_rgb(0,0,0)_88%,_rgba(0,0,0,0)_100%)]">
             <div v-for="(logo, index) in logos" :key="index"
-                class="logos-slide flex animate-carousel group-hover:paused">
-                <template v-if="loading">
-                    <!-- Skeleton Loading -->
-                    <div v-for="n in 5" :key="`skeleton-${n}`"
-                        class="h-16 w-24 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl flex items-center justify-center">
-                        <div class="h-10 w-20 bg-gray-300 dark:bg-gray-700 rounded-lg animate-pulse"></div>
-                    </div>
-                </template>
-
-                <template v-else>
-                    <!-- Actual Content -->
-                    <NuxtImg v-for="(image, idx) in logo.images" :key="idx"
-                        class="h-16 p-3 m-2 bg-gray-200 dark:bg-lightBlack rounded-2xl max-w-none" :src="image.src"
-                        :alt="image.alt" :title="image.title" format="webp" sizes="100px" loading="lazy" />
-                </template>
+                class="logos-slide flex items-center animate-carousel">
+                <NuxtImg v-for="(image, idx) in logo.images" :key="idx"
+                    class="h-14 w-auto p-2.5 m-1.5 bg-gray-100/80 hover:bg-gray-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.1] border border-black/5 dark:border-white/5 rounded-xl max-w-none transition-all duration-300 hover:scale-105"
+                    :src="image.src"
+                    :alt="image.alt"
+                    :title="image.title"
+                    format="webp"
+                    sizes="80px"
+                    loading="lazy"
+                />
             </div>
         </div>
     </div>
@@ -63,4 +58,8 @@ const logos = [
 ];
 </script>
 
-<style scoped></style>
+<style scoped>
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+</style>
